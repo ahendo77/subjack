@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/haccer/subjack/subjack"
+	"github.com/ahendo77/subjack/subjack"
 )
 
 func main() {
@@ -24,7 +24,7 @@ func main() {
 	flag.BoolVar(&o.All, "a", false, "Find those hidden gems by sending requests to every URL. (Default: Requests are only sent to URLs with identified CNAMEs).")
 	flag.BoolVar(&o.Verbose, "v", false, "Display more information per each request.")
 	flag.StringVar(&o.Output, "o", "", "Output results to file (Subjack will write JSON if file ends with '.json').")
-	flag.StringVar(&o.Config, "c", defaultConfig, "Path to configuration file.")
+	flag.StringVar(&o.Config, "c", "", "Path to configuration file.")
 	flag.BoolVar(&o.Manual, "m", false, "Flag the presence of a dead record, but valid CNAME entry.")
 
 	flag.Parse()
